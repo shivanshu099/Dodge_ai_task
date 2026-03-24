@@ -85,3 +85,9 @@ npm run dev
 
 - Make sure both backend and frontend servers are running simultaneously.
 - Ensure all dependencies are properly installed before running the project.
+
+
+## scrrenshots
+
+(screenshots here!......)
+![App Screenshot](https://github.com/shivanshu099/Dodge_ai_task/blob/main/dodge_ai_screenshot.png)
