@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import ForceGraph2D from 'react-force-graph-2d'
 
-const API_URL = 'http://127.0.0.1:8000/api/graph'
+const API_URL = 'https://dodge-ai-task.onrender.com/api/graph'
 
 const GROUP_CONFIG = {
   1: { label: 'Sales Order', color: '#3b82f6', abbr: 'SO', cssClass: 'so' },
@@ -38,7 +38,7 @@ export default function App() {
     setChatMessages(prev => [...prev, { role: 'user', text: msg }])
     setChatLoading(true)
     try {
-      const res = await fetch('http://127.0.0.1:8000/ask', {
+      const res = await fetch('https://dodge-ai-task.onrender.com/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: msg }),
