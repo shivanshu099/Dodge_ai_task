@@ -15,7 +15,10 @@ import sqlite3
 from typing import Optional
 from langchain_core.tools import tool
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "..", "sap_o2c.db")
+#DB_PATH = os.path.join(os.path.dirname(__file__), "..", "sap_o2c.db")
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, "sap_o2c.db")
 
 
 def _get_connection():
