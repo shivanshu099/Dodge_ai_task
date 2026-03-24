@@ -153,7 +153,7 @@ export default function App() {
         <div className="logo-section">
           <div className="logo-icon">⬡</div>
           <div>
-            <h1>SAP O2C Graph Explorer</h1>
+            <h1>Dodge AI</h1>
             <div className="subtitle">Order-to-Cash Process Visualization</div>
           </div>
         </div>
