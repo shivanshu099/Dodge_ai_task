@@ -386,7 +386,7 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  min-height: 0;
+  height: 400px;
   padding-bottom: 0 !important;
   border-bottom: none !important;
 }
