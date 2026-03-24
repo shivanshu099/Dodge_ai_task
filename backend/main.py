@@ -15,7 +15,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "..", "sap_o2c.db")
+# DB_PATH = os.path.join(os.path.dirname(__file__), "..", "sap_o2c.db")
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, "sap_o2c.db")
 
 @app.get("/api/graph")
 def get_graph_data(limit: int = 100):
