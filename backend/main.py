@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from llm import llm_response
 import os
+from fastapi import Body
 
 app = FastAPI()
 
@@ -99,11 +100,16 @@ def get_graph_data(limit: int = 100):
         "links": links
     }
 
+"""
 @app.get("/ask")
 def llm_ask(question:str)->str:
     return llm_response(question)
+"""
 
-
+@app.post("/ask")
+def llm_ask(data: dict = Body(...)):
+    question = data.get("message")
+    return {"response": llm_response(question)}
 
 
 if __name__ == "__main__":
